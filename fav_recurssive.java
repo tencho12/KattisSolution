@@ -4,10 +4,13 @@ class fav_recurssive{
         Scanner sc=new Scanner(System.in);
         fav_recurssive ob=new fav_recurssive();
         int n=sc.nextInt();
-        int r=ob.fav(n);
+        
+        System.out.print(fav(n));
     }
-    int fav(int n){
-        if(n<=2) return 1;
-        else return fav(n)+fav(n-1);
+    public static int fav(int n){
+        if(n==1 || n==2) 
+            return 1;
+        else 
+            return fav(n-1)+fav(n-2);
     }
 }
